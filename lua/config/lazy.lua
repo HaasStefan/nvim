@@ -19,14 +19,6 @@ require("lazy").setup({
     -- Add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
-    -- Add GitHub theme plugin
-    {
-      "projekt0n/github-nvim-theme",
-      config = function()
-        -- Use the even darker GitHub theme
-        vim.cmd("colorscheme github_dark_default")
-      end,
-    },
     -- Import/override with your plugins
     { import = "plugins" },
   },
@@ -36,7 +28,7 @@ require("lazy").setup({
     -- It's recommended to leave version=false for now, since many plugins supporting versioning have outdated releases.
     version = false, -- always use the latest git commit
   },
-  install = { colorscheme = { "github_dark_default" } }, -- Install the darker GitHub theme
+  -- install = { colorscheme = { "github_dark_default" } }, -- Install the darker GitHub theme
   checker = {
     enabled = true, -- Automatically check for plugin updates
     notify = false, -- Do not notify on update
